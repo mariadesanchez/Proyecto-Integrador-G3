@@ -95,7 +95,8 @@ form {
 
 .card-grid {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    margin-top: 150px;
 }
 
 */ */ table {
