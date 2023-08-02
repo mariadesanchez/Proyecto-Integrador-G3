@@ -5,21 +5,29 @@ import { Link } from 'react-router-dom'
 // import { useNavigate } from 'react-router-dom'
 import { routes } from '../utils/routes'
 // eslint-disable-next-line no-unused-vars
-import { usecontextGlobal } from './utils/GlobalContext'
+// import { usecontextGlobal } from './utils/GlobalContext'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
+import styled from 'styled-components';
+
+const FixedHeader = styled.div`
+
+  position:fixed;
+
+ 
+`;
 const Navbar = () => {
   // const navigate = useNavigate()
 
  // eslint-disable-next-line no-unused-vars
- const {dentistDispatch, dentistState} = usecontextGlobal()
+//  const {dentistDispatch, dentistState} = usecontextGlobal()
  
 
 
   return (
 
       
-    
+    <FixedHeader>
    <div className='links'>
 <div className='logo'>
 <Link to={routes.home}><img src=" /images/deportes.png" alt='Deportes' style={{ width: '100px', height: '100px' }} /></Link>
@@ -34,7 +42,7 @@ const Navbar = () => {
       </div>
    
     
-        
+      </FixedHeader>
       
 
       
