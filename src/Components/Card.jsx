@@ -11,20 +11,20 @@ const Card = ({ dentist }) => {
   
   const {dentistState,dentistDispatch} = usecontextGlobal()
   
-    const findFav = dentistState.dentistLike.find(fav => fav.id === dentist.id)
+    // const findFav = dentistState.dentistLike.find(fav => fav.id === dentist.id)
    
-    const addFav = () => { 
-      if(!findFav){
-        dentistDispatch({type: 'DENTIST_LIKE', payload: dentist})
-      } else {
-        const filteredFavs = dentistState.dentistLike.filter(fav => fav.id !== dentist.id)
-        dentistDispatch({type: 'DENTIST_DELETE', payload: filteredFavs})}
-      }
+    // const addFav = () => { 
+      // if(!findFav){
+      //   dentistDispatch({type: 'DENTIST_LIKE', payload: dentist})
+      // } else {
+      //   const filteredFavs = dentistState.dentistLike.filter(fav => fav.id !== dentist.id)
+      //   dentistDispatch({type: 'DENTIST_DELETE', payload: filteredFavs})}
+      // }
   
 
   return (
     
-      <div className="card">
+      <div className="card"style={{width:'450px', height:'550px',marginLeft:'35px',marginTop:'200px',marginBottom:'20px'}} >
         {/* <Link key={dentist.id}to={'/detalle/' +dentist.id} style={{ textDecoration: 'none'}}> */}
         {/* En cada card deberan mostrar en name - username y el id */}
         <img src=" /images/messi.jpeg" alt='Messi' style={{width:'100%'}}/>

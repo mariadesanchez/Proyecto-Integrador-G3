@@ -9,14 +9,11 @@ import { routes } from '../utils/routes'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 import styled from 'styled-components';
-
 const FixedHeader = styled.div`
-
   position:fixed;
-
- 
+  z-index:100;
 `;
-const Navbar = () => {
+const Header = () => {
   // const navigate = useNavigate()
 
  // eslint-disable-next-line no-unused-vars
@@ -28,16 +25,16 @@ const Navbar = () => {
 
       
     <FixedHeader>
-   <div className='links'>
+<div className='links'>
 <div className='logo'>
-<Link to={routes.home}><img src=" /images/deportes.png" alt='Deportes' style={{ width: '100px', height: '100px' }} /></Link>
+<Link to={routes.home}><img src=" /images/logo.png" alt='Deportes' style={{ width: '100px', height: '100px' }} /></Link>
       {/* <h4 onClick={() => navigate(-1)}>↩Back</h4> */}
     
       <Link to={routes.home} style={{textDecorationLine:'none'}}> <h2>Lo mejor en Indumentaria</h2></Link>
       </div>
-    <div>
-        <button style={{ marginRight: '10px', borderRadius: '5px', height: '60px', width: '150px' }}>Crear Cuenta</button>
-        <button style={{ marginRight: '10px', borderRadius: '5px', height: '60px', width: '150px' }}>Iniciar Sesion</button>
+    <div className='register-login'>
+        <button >Crear Cuenta</button>
+        <button >Iniciar Sesion</button>
       </div>
       </div>
    
@@ -51,5 +48,5 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Header
 

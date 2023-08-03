@@ -11,13 +11,33 @@ const Home = () => {
   const {dentistState} = usecontextGlobal()
   return (
     <main className="" >
-      <h1>Home</h1>
+     
       <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
-      {/* <div className='item'> */}
-        {dentistState.dentistsList.map(dentist => (<Card dentist={dentist} key ={dentist.id}/>))}
-     {/* </div> */}
+  
+    
+      <p style={{fontSize:'3em',textAlign:'center',marginTop:'200px'}}>Buscar Por Marcas</p>
+      <div className='marcas' >
+       
+        {dentistState.dentistsList.map(dentist => (<Card  dentist={dentist} key ={dentist.id}/>))}
+        </div>
       </div>
+      <p style={{fontSize:'3em',textAlign:'center'}}>Recomendaciones</p>
+      <div className='recomendaciones' style={{marginLeft:'200px'}}>
+        {/* {dentistState.dentistsList.map(dentist => (<Card dentist={dentist} key ={dentist.id}/>))} */}
+        
+        {dentistState.dentistsList.filter(dentist =>  dentist.id==1||dentist.id==2||dentist.id==3||dentist.id==4||dentist.id==5)
+  .
+ 
+map(dentist => (
+    <Card  dentist={dentist} key={dentist.id} />
+  ))
+}
+  
+        
+        
+        
+        
+        </div>
     </main>
   )
 }

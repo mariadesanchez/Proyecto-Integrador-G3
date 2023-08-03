@@ -6,7 +6,7 @@ const Footer = () => {
 
     <footer >   
 
-      <img src=" /images/deportes.png" alt='Deportes'/>
+      <img src=" /images/logo.png" alt='Deportes'/>
         <h2>@2023 Deportes Booking</h2>
       
     </footer>
